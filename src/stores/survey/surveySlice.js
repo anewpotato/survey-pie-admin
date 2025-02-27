@@ -1,6 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { data: null, loading: false, error: null };
+const initialState = {
+  data: null,
+  loading: false,
+  error: null,
+};
 export const surveySlice = createSlice({
   name: 'survey',
   initialState,
