@@ -1,6 +1,7 @@
 import { Radio, Space } from 'antd';
 
 export default function SelectInput({ options }) {
+  console.log(options);
   return (
     <Space direction="vertical">
       {options.items.map((item, index) => (
