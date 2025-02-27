@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# [Inflearn 실무 중심! FE 입문자를 위한 React](https://www.inflearn.com/course/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%8B%A4%EB%AC%B4%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%A0%9C%EC%9E%91%ED%95%98%EA%B8%B0/dashboard)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### ❗해당 프로젝트는 독학으로 학습한 React 개념에 대해 복습함과 동시에 다른 실무에서의 TIP을 얻을 수 있을까 해서 간단하게 학습중인 내용입니다.
 
-## Available Scripts
+강의 전반에 걸친 개념들은 거의 다 아는 부분이고, 커리큘럼 상 SWR, Recoil 등 사용해보지 못한 기술이 있어 학습하는 것이기 때문에 오해가 없으면 좋겠습니다.
 
-In the project directory, you can run:
+- 본 프로젝트는 해당 강의에서 소개하고 있는 survey-pie 프로젝트입니다.
 
-### `npm start`
+## 강의 내 제공 문서
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [서비스 기획서](./documents/SurveyPie%20Admin%20기획서.pdf)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 강의 내 제공 서버
 
-### `npm test`
+- https://github.com/anewpotato/survey-pie-server
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 설치 및 실행
 
-### `npm run build`
+### `npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 의존성 패키지 설치.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+http://localhost:3000 접속.
