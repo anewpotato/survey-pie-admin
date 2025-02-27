@@ -164,6 +164,14 @@ export default function OptionSection() {
                     options,
                     type: question.type,
                   };
+
+                  if (
+                    values.type === 'select' &&
+                    typeof values.options.items === 'string'
+                  ) {
+                    values.options.items = values.options.items.split(';');
+                  }
+
                   dispatch(
                     setQuestion({
                       index: selectedQuestionId,

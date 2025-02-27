@@ -1,9 +1,5 @@
-import fetcher from '../../lib/fetcher';
-import {
-  setError,
-  setLoading,
-  setSurvey,
-} from '../../stores/survey/surveySlice';
+import fetcher from '../lib/fetcher';
+import { setError, setLoading, setSurvey } from '../stores/survey/surveySlice';
 
 const fetchSurvey = (surveyId) => (dispatch, getState) => {
   dispatch(setLoading(true));

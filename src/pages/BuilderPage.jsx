@@ -4,10 +4,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
 import BuilderTitleInput from '../components/BuilderTitleInput';
+import FloatingButton from '../components/FloatingButton';
 import OptionSection from '../components/OptionSection';
 import PreviewSection from '../components/PreviewSection';
-import fetchSurvey from '../components/services/fetchSurvey';
 import MainLayout from '../layouts/MainLayout';
+import fetchSurvey from '../services/fetchSurvey';
 
 export default function BuilderPage() {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ export default function BuilderPage() {
           <OptionSection />
         </Col>
       </Row>
+      <FloatingButton />
     </MainLayout>
   );
 }
