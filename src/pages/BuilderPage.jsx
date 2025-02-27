@@ -23,9 +23,9 @@ export default function BuilderPage() {
   if (error) return 'error';
   if (loading) return 'loading..';
   return (
-    <MainLayout selectedKeys={['builder']}>
-      <Row>
-        <Col flex="auto">
+    <MainLayout selectedKeys={['builder']} padding={0}>
+      <Row style={{ height: '100%' }}>
+        <Col flex="auto" style={{ padding: 30 }}>
           <BuilderTitleInput />
           <PreviewSection />
         </Col>

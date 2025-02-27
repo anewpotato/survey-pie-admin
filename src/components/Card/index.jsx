@@ -9,14 +9,16 @@ export default function Card({
   onUpButtonClick,
   onDownButtonClick,
   onDeleteButtonClick,
+  onClick,
+  isSelected,
 }) {
   return (
-    <CardWrapper>
-      <Head>
+    <CardWrapper isSelected={isSelected}>
+      <Head onClick={onClick}>
         <Title>{title}</Title>
         <Desc>{desc}</Desc>
       </Head>
-      <Body>{children}</Body>
+      <Body onClick={onClick}>{children}</Body>
       <ButtonGroupWrapper>
         <ButtonGroup>
           <Button type="text" onClick={onUpButtonClick} icon={<UpOutlined />} />
@@ -49,12 +51,13 @@ const ButtonGroup = styled.div`
 `;
 
 const CardWrapper = styled.div`
-  border: 1px solid #dddddd;
+  border: ${({ isSelected }) =>
+    isSelected ? '3px solid blue' : '1px solid #dddddd'};
   width: 400px;
   margin: 30px auto;
   background: #ffffff;
   position: relative;
-
+  padding: 10px;
   &:hover ${ButtonGroupWrapper} {
     display: block;
   }
