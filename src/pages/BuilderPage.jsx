@@ -1,4 +1,5 @@
 import { Col, Input, Row } from 'antd';
+import produce from 'immer';
 import { useState } from 'react';
 
 import OptionSection from '../components/OptionSection';
@@ -50,11 +51,60 @@ export default function BuilderPage() {
           <Input
             placeholder="설문 제목을 입력해주세요."
             value={data.title}
-            onChange={(e) =>
-              setData((prev) => ({ ...prev, title: e.target.value }))
-            }
+            onChange={(e) => {
+              setData(
+                produce(data, (draft) => {
+                  draft.title = e.target.value;
+                }),
+              );
+            }}
           />
-          <PreviewSection questions={data.questions} />
+          <PreviewSection
+            questions={data.questions}
+            addQuestion={() => {
+              setData(
+                produce((draft) => {
+                  draft.questions.push({
+                    title: 'Untitled',
+                    desc: '',
+                    type: 'text',
+                    required: false,
+                    options: {
+                      max: 20,
+                      placeholder: '',
+                    },
+                  });
+                }),
+              );
+            }}
+            moveUpQuestion={(index) => {
+              if (index === 0) return;
+              setData(
+                produce((draft) => {
+                  const temp = draft.questions[index];
+                  draft.questions[index] = draft.questions[index - 1];
+                  draft.questions[index - 1] = temp;
+                }),
+              );
+            }}
+            moveDownQuestion={(index) => {
+              if (index === data.questions.length - 1) return;
+              setData(
+                produce((draft) => {
+                  const temp = draft.questions[index];
+                  draft.questions[index] = draft.questions[index + 1];
+                  draft.questions[index + 1] = temp;
+                }),
+              );
+            }}
+            deleteQuestion={(index) => {
+              setData(
+                produce((draft) => {
+                  draft.questions.splice(index, 1);
+                }),
+              );
+            }}
+          />
         </Col>
         <Col flex="350px">
           <OptionSection />
